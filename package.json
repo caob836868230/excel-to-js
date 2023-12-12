@@ -1,0 +1,22 @@
+{
+  "name": "excel-to-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "excel-to-js": "./bin/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-xlsx": "^0.23.0",
+    "pinyin": "^2.11.2"
+  },
+  "devDependencies": {
+    "commander": "^11.1.0",
+    "js-beautify": "^1.14.11"
+  }
+}
