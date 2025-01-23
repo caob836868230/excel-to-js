@@ -45,3 +45,4 @@ function genTableData(dataList, columns) {
 
 module.exports.genTableColumn = genTableColumn;
 module.exports.genTableData = genTableData;
+module.exports.getTableDataItem = getTableDataItem;

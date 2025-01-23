@@ -11,7 +11,8 @@ program
   .option('-s --source <filepath>', 'exist excel file name')
   .option('-t --target <filepath>', 'generate js file name')
   .action((opts) => {
-    excelParser.transformExcel(`${process.cwd()}/${opts.source}`, opts.target);
+    // excelParser.transformExcel(`${process.cwd()}/${opts.source}`, opts.target);
+    excelParser.transformXinjiangServiceGuideExcel(`${process.cwd()}/${opts.source}`, opts.target);
   });
 
 program.parse();

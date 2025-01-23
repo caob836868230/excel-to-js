@@ -10,7 +10,7 @@
       "name": "excel-to-js",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}\\bin\\index.js",
-      "args": ["-s", "./data.xlsx"]
+      "args": ["-s", "./办事指南配置模版.xlsx"]
     }
   ]
 }
