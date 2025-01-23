@@ -4,4 +4,5 @@
 
 ```shell
 excel-to-js -s './data.xlsx'
+excel-to-js -s './办事指南配置模版.xlsx'
 ```
