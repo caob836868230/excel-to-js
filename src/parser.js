@@ -11,12 +11,14 @@ function transformExcel(parseFilePath, genFileName = 'tabledata.js') {
     const sheetName = sheet.name;
     const data = sheet.data;
     const header = data[0];
-    const columns = genTableColumn(header);
-    const dataSource = genTableData(data.slice(1), columns)
-    dataMap[sheetName] = {
-      columns,
-      dataSource
-    };
+    if (header) {
+      const columns = genTableColumn(header);
+      const dataSource = genTableData(data.slice(1), columns)
+      dataMap[sheetName] = {
+        columns,
+        dataSource
+      };
+    }
   });
   fs.writeFile(
     `${process.cwd()}/${genFileName}`,
