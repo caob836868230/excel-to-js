@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 const { Command } = require('commander');
 const { name, version } = require('../package.json');
-const excelParser = require('../src/parser');
+const excelParser = require('../src/service-guide-parser');
+// const excelParser = require('../src/parser');
 
 const program = new Command();
 program
