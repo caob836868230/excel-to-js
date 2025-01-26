@@ -61,6 +61,9 @@ const setValueMap = {
   承诺办结时限: (value, target) => {
     target.mattersInfo[0].term = value;
   },
+  到场次数: (value, target) => {
+    target.mattersInfo[0].numberOfVisits = Number(value.replace('次', ''));
+  },
   必须现场办理原因说明: (value, target) => {
     target.mattersInfo[0].onsiteReason = value;
   },
@@ -123,7 +126,7 @@ function transformXinjiangServiceGuideExcel(parseFilePath, genFileName = 'tabled
           // 申报材料和联办事项
           const dataItem = getTableDataItem(curColumns);
           curColumns.forEach((col, colIndex) => {
-            dataItem[col.dataIndex] = realRow[colIndex + 1] || '';
+            dataItem[col.dataIndex] = realRow[colIndex + 2] || '';
           });
           const tempTarget = index === 4 ? curTarget.sceneDetail.applyMaterials : curTarget.sceneDetail.unionMatter;
           tempTarget.push(dataItem);
